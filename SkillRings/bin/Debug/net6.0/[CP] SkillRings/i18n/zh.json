@@ -51,12 +51,12 @@
     "Recipe_RingofDeepRoots": "深根之戒",
     "Recipe_RingoftheGatherer": "采集者之戒",
 
-    "LuckRing1_Name": "Ring of Better Odds",
-    "LuckRing1_Description": "Slightly increases your luck.",
-    "LuckRing2_Name": "Ring of the Gambler",
-    "LuckRing2_Description": "Moderately increases your luck.",
-    "LuckRing3_Name": "Ring of Loaded Die",
-    "LuckRing3_Description": "Greatly increases your luck.",
+    "LuckRing1_Name": "气运之戒",
+    "LuckRing1_Description": "小幅增加你的运气。",
+    "LuckRing2_Name": "赌徒之戒",
+    "LuckRing2_Description": "中幅增加你的运气",
+    "LuckRing3_Name": "欺瞒之戒",
+    "LuckRing3_Description": "大幅增加你的运气",
 
     "Mail_DustyRingDescription": "嘿！^我在商店里找到了这个，或许你可以把它派上用场。^-威利",
     "Mail_DustyRingTitle": "布满灰尘的戒指",

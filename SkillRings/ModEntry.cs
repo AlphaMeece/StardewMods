@@ -41,9 +41,9 @@ namespace SkillRings
             helper.Events.GameLoop.GameLaunched += new EventHandler<GameLaunchedEventArgs>(onGameLaunched);
             helper.Events.GameLoop.UpdateTicked += new EventHandler<UpdateTickedEventArgs>(onUpdateTicked);
             helper.Events.GameLoop.DayStarted += new EventHandler<DayStartedEventArgs>(onDayStarted);
-            helper.Events.GameLoop.SaveLoaded += new EventHandler<SaveLoadedEventArgs>(onSaveLoaded);
             helper.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(onButtonPressed);
             helper.Events.Content.AssetRequested += new EventHandler<AssetRequestedEventArgs>(onAssetRequested);
+            helper.Events.Specialized.LoadStageChanged += new EventHandler<LoadStageChangedEventArgs>(onLoadStateChanged);
 
             //Adding console commands to the game
             //Fixes the health of the player if it was messed up by the mod
@@ -161,24 +161,27 @@ namespace SkillRings
             contentPatcherAPI.RegisterToken(ModManifest, "TierThreeRingPrice", () => new[] { cfg.tier3SkillRingPrice.ToString() });
         }
 
-        private void onSaveLoaded(object sender, SaveLoadedEventArgs e)
+        private void onLoadStateChanged(object sender, LoadStageChangedEventArgs e)
         {
-            moddedSkillIds = Skills.GetSkillList();
-            if(moddedSkillIds.Length != 0) hasModdedSkills = true;
-
-            if(hasModdedSkills)
+            if(e.NewStage == StardewModdingAPI.Enums.LoadStage.CreatedBasicInfo || e.NewStage == StardewModdingAPI.Enums.LoadStage.SaveParsed)
             {
-                List<int> oldExp = new List<int>();
-                foreach(var id in moddedSkillIds)
+                moddedSkillIds = Skills.GetSkillList();
+                if(moddedSkillIds.Length != 0) hasModdedSkills = true;
+
+                if(hasModdedSkills)
                 {
-                    oldExp.Add(Skills.GetExperienceFor(Game1.player, id));
+                    List<int> oldExp = new List<int>();
+                    foreach(var id in moddedSkillIds)
+                    {
+                        oldExp.Add(Skills.GetExperienceFor(Game1.player, id));
+                    }
+                    moddedSkillExperience = oldExp.ToArray();
                 }
-                moddedSkillExperience = oldExp.ToArray();
+
+                Helper.GameContent.InvalidateCache("Data/Objects");
+                Helper.GameContent.InvalidateCache("Data/Shops");
             }
 
-
-            Helper.GameContent.InvalidateCache("Data/Objects");
-            Helper.GameContent.InvalidateCache("Data/Shops");
         }
 
         private void onAssetRequested(object sender, AssetRequestedEventArgs e)
@@ -189,6 +192,7 @@ namespace SkillRings
                 {
                     foreach(string id in moddedSkillIds)
                     {
+                        
                         Monitor.Log(string.Format("Loaded Custom Skill {0}", id), (LogLevel) 1);
                         ObjectData Ring1 = new ObjectData()
                         {
@@ -198,7 +202,8 @@ namespace SkillRings
                             Type = "Ring",
                             Category = StardewValley.Object.ringCategory,
                             Texture = "AlphaMeece.SkillRings/Objects",
-                            SpriteIndex = 24
+                            SpriteIndex = 24,
+                            CustomFields = new Dictionary<string, string>()
                         };
                         ObjectData Ring2 = new ObjectData()
                         {
@@ -208,7 +213,8 @@ namespace SkillRings
                             Type = "Ring",
                             Category = StardewValley.Object.ringCategory,
                             Texture = "AlphaMeece.SkillRings/Objects",
-                            SpriteIndex = 25
+                            SpriteIndex = 25,
+                            CustomFields = new Dictionary<string, string>()
                         };
                         ObjectData Ring3 = new ObjectData()
                         {
@@ -218,7 +224,8 @@ namespace SkillRings
                             Type = "Ring",
                             Category = StardewValley.Object.ringCategory,
                             Texture = "AlphaMeece.SkillRings/Objects",
-                            SpriteIndex = 26
+                            SpriteIndex = 26,
+                            CustomFields = new Dictionary<string, string>()
                         };
 
                         ringIDs.Add(string.Format("AlphaMeece.SkillRings_{0}Ring1", id));
@@ -240,22 +247,41 @@ namespace SkillRings
             {
                 e.Edit(asset =>
                 {
-                    for(int i = 0; i < ringIDs.Count; i += 3)
+                    for(int i = 0; i < ringIDs.Count; i++)
                     {
                         var editor = asset.AsDictionary<string, ShopData>();
-                        if(editor.Data.TryGetValue("Traveler", out var merchant))
+                        string ringID = ringIDs[i];
+
+                        string shop = "Traveler";
+                        
+                        if(Game1.objectData.TryGetValue(ringID, out ObjectData ringData))
+                        {
+                            if(ringData.CustomFields.TryGetValue("AlphaMeece.SkillRings_Shop", out var customShop))
+                            {
+                                if(editor.Data.ContainsKey(customShop))
+                                {
+                                    shop = customShop;
+                                } 
+                                else Monitor.Log($"Attempted to add {ringID} to shop {customShop}, but {customShop} does not exist, defaulting to \"Traveler\"", (LogLevel) 1);
+                            }
+                        }
+
+                        if(editor.Data.TryGetValue(shop, out var merchant))
                         {
                             bool flag = false;
                             foreach(var item in merchant.Items) if(item.ItemId == ringIDs[i]) flag = true;
-                            if(!flag) merchant.Items.Add(new ShopItemData { ItemId = ringIDs[i], Price = cfg.tier1SkillRingPrice, AvoidRepeat = true });
-                            
-                            flag = false;
-                            foreach(var item in merchant.Items) if(item.ItemId == ringIDs[i + 1]) flag = true;
-                            if(!flag) merchant.Items.Add(new ShopItemData { ItemId = ringIDs[i + 1], Price = cfg.tier2SkillRingPrice, AvoidRepeat = true });
 
-                            flag = false;
-                            foreach(var item in merchant.Items) if(item.ItemId == ringIDs[i + 2]) flag = true;
-                            if(!flag) merchant.Items.Add(new ShopItemData { ItemId = ringIDs[i + 2], Price = cfg.tier3SkillRingPrice, AvoidRepeat = true });
+                            int price = cfg.tier1SkillRingPrice;
+                            if(ringID.EndsWith("2")) price = cfg.tier2SkillRingPrice;
+                            else if(ringID.EndsWith("3")) price = cfg.tier3SkillRingPrice;
+
+                            if(!flag) merchant.Items.Add(new ShopItemData { 
+                                ItemId = ringIDs[i], 
+                                Price = price, 
+                                AvoidRepeat = true,
+                                ApplyProfitMargins = false,
+                                IgnoreShopPriceModifiers = true
+                            });
                         }
                         else Monitor.Log("Failed", (LogLevel) 1);
                     }

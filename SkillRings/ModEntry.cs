@@ -50,6 +50,8 @@ namespace SkillRings
             helper.ConsoleCommands.Add("fixhealth", "Changes max health to what it should be, take off combat rings and don't have combat buffs on\n\nUsage: fixhealth", new Action<string, string[]>(fixHealth));
             //Converts the held broken ring into its fixed tier 3 equivalent
             helper.ConsoleCommands.Add("fixring", "Fixes the currently held broken ring, converting it to its tier 3 equivalent", new Action<string, string[]>(fixRing));
+            helper.ConsoleCommands.Add("sendmail", "Sends mail for a tier 3 ring, usage:\n\tsendmail [skill]\n\twhere skill is one of: farming, fishing, foraging, combat, mining, foragingr1, foragingr2", new Action<string, string[]>(sendMail));
+            
             //Load the config file
             cfg = helper.ReadConfig<ModConfig>();
         }
@@ -262,7 +264,7 @@ namespace SkillRings
                                 {
                                     shop = customShop;
                                 } 
-                                else Monitor.Log($"Attempted to add {ringID} to shop {customShop}, but {customShop} does not exist, defaulting to \"Traveler\"", (LogLevel) 1);
+                                else Monitor.Log($"Attempted to add {ringID} to shop {customShop}, but {customShop} does not exist, defaulting to \"Traveler\"", LogLevel.Warn);
                             }
                         }
 
@@ -912,6 +914,41 @@ namespace SkillRings
         private bool hasRing(string Id)
         {
             return Game1.player.isWearingRing(Id);
+        }
+
+        private void sendMail(string command, string[] args)
+        {
+            if(args.Length == 0) {
+                Monitor.Log("Please enter a skill", LogLevel.Error);
+                return;
+            }
+            switch(args[0].ToLower())
+            {
+                case "farming":
+                    Game1.player.mailbox.Add("AlphaMeece.SkillRings_GrassyRing");
+                    break;
+                case "fishing":
+                    Game1.player.mailbox.Add("AlphaMeece.SkillRings_DustyRing");
+                    break;
+                case "foraging":
+                    Game1.player.mailbox.Add("AlphaMeece.SkillRings_StickyRing");
+                    break;
+                case "mining":
+                    Game1.player.mailbox.Add("AlphaMeece.SkillRings_StoneRing");
+                    break;
+                case "combat":
+                    Game1.player.mailbox.Add("AlphaMeece.SkillRings_CursedRing");
+                    break;
+                case "foragingr1":
+                    Game1.player.mailbox.Add("AlphaMeece.SkillRings_Foraging1Recipe");
+                    break;
+                case "foragingr2":
+                    Game1.player.mailbox.Add("AlphaMeece.SkillRings_Foraging2Recipe");
+                    break;
+                default:
+                    Monitor.Log("Please enter one of: foraging, fishing, farming, combat, mining, foragingr1, foragingr2", LogLevel.Warn);
+                    break;
+            }
         }
 
         private void handleMail()

@@ -3,5 +3,5 @@ packages.config
 Properties/AssemblyInfo.c
 SpaceCore.dll
 ContentPatcher.dll
-bin/*
-obj/*
+SkillRings/bin/*
+SkillRings/obj/*

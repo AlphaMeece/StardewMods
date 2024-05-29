@@ -22,3 +22,27 @@ C:\Users\Daemon\source\repos\StardewMods\StardewMods\SkillRings\bin\Debug\net6.0
 C:\Users\Daemon\source\repos\StardewMods\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\i18n\ko.json
 C:\Users\Daemon\source\repos\StardewMods\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\i18n\zh.json
 C:\Users\Daemon\source\repos\StardewMods\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\manifest.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\assets\objects.png
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\content.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\data\buffs.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\data\craftingrecipes.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\data\mail.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\data\objects.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\data\shops.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\i18n\de.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\i18n\default.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\i18n\ko.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\i18n\zh.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\[CP] SkillRings\manifest.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\SkillRings.deps.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\SkillRings.dll
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\ContentPatcher.dll
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\bin\Debug\net6.0\SpaceCore.dll
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\obj\Debug\net6.0\SkillRings.csproj.AssemblyReference.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\obj\Debug\net6.0\SkillRings.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\obj\Debug\net6.0\SkillRings.AssemblyInfoInputs.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\obj\Debug\net6.0\SkillRings.AssemblyInfo.cs
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\obj\Debug\net6.0\SkillRings.csproj.CoreCompileInputs.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\obj\Debug\net6.0\SkillRings.sourcelink.json
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\obj\Debug\net6.0\SkillRings.csproj.Up2Date
+C:\Users\AlphaMeece\Desktop\StardewMods\SkillRings\obj\Debug\net6.0\SkillRings.dll

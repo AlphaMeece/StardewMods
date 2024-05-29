@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Cae16hCuU0a+ZLnIJ9fagPgWOJWHtyptkC+fAJtK/b5tlFUNBHE0mOu0Q3cuwjFO5Zzr+1MPEsSd07XVBF7Cdw==",
+  "dgSpecHash": "irs9/lWqFq61PrHtC8wtj7+72cbZ1+G5amHc9Nca6/F67TQqnBQ+62ktoV86M3KwMDrWhEIGpUFXytnb/SBoIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daemon\\source\\repos\\StardewMods\\StardewMods\\SkillRings\\SkillRings.csproj",
+  "projectFilePath": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\SkillRings.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Daemon\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.1.1\\pathoschild.stardew.modbuildconfig.4.1.1.nupkg.sha512"
+    "C:\\Users\\AlphaMeece\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.1.1\\pathoschild.stardew.modbuildconfig.4.1.1.nupkg.sha512"
   ],
   "logs": []
 }

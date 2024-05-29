@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daemon\\source\\repos\\StardewMods\\StardewMods\\SkillRings\\SkillRings.csproj": {}
+    "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\SkillRings.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daemon\\source\\repos\\StardewMods\\StardewMods\\SkillRings\\SkillRings.csproj": {
+    "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\SkillRings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daemon\\source\\repos\\StardewMods\\StardewMods\\SkillRings\\SkillRings.csproj",
+        "projectUniqueName": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\SkillRings.csproj",
         "projectName": "SkillRings",
-        "projectPath": "C:\\Users\\Daemon\\source\\repos\\StardewMods\\StardewMods\\SkillRings\\SkillRings.csproj",
-        "packagesPath": "C:\\Users\\Daemon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daemon\\source\\repos\\StardewMods\\StardewMods\\SkillRings\\obj\\",
+        "projectPath": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\SkillRings.csproj",
+        "packagesPath": "C:\\Users\\AlphaMeece\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Daemon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlphaMeece\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

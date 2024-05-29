@@ -9,3 +9,14 @@ C:\Users\aslpl\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.As
 C:\Users\aslpl\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.csproj.CoreCompileInputs.cache
 C:\Users\aslpl\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.sourcelink.json
 C:\Users\aslpl\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.dll
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\bin\Debug\net6.0\[CP] GluttonyRing\content.json
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\bin\Debug\net6.0\[CP] GluttonyRing\data\objects.json
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\bin\Debug\net6.0\GluttonyRing.deps.json
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\bin\Debug\net6.0\GluttonyRing.dll
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.csproj.AssemblyReference.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.AssemblyInfoInputs.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.AssemblyInfo.cs
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.csproj.CoreCompileInputs.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.sourcelink.json
+C:\Users\AlphaMeece\Desktop\StardewMods\GluttonyRing\obj\Debug\net6.0\GluttonyRing.dll

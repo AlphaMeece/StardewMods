@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aslpl\\Desktop\\StardewMods\\GluttonyRing\\GluttonyRing.csproj": {}
+    "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\GluttonyRing\\GluttonyRing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aslpl\\Desktop\\StardewMods\\GluttonyRing\\GluttonyRing.csproj": {
+    "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\GluttonyRing\\GluttonyRing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aslpl\\Desktop\\StardewMods\\GluttonyRing\\GluttonyRing.csproj",
+        "projectUniqueName": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\GluttonyRing\\GluttonyRing.csproj",
         "projectName": "GluttonyRing",
-        "projectPath": "C:\\Users\\aslpl\\Desktop\\StardewMods\\GluttonyRing\\GluttonyRing.csproj",
-        "packagesPath": "C:\\Users\\aslpl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aslpl\\Desktop\\StardewMods\\GluttonyRing\\obj\\",
+        "projectPath": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\GluttonyRing\\GluttonyRing.csproj",
+        "packagesPath": "C:\\Users\\AlphaMeece\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\GluttonyRing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aslpl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlphaMeece\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

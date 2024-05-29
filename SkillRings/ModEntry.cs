@@ -36,6 +36,8 @@ namespace SkillRings
         private bool hasModdedSkills = false;
         private int[] moddedSkillExperience = { };
 
+        private bool ringsChecked = false;
+
         public override void Entry(IModHelper helper)
         {
             helper.Events.GameLoop.GameLaunched += new EventHandler<GameLaunchedEventArgs>(onGameLaunched);
@@ -43,7 +45,7 @@ namespace SkillRings
             helper.Events.GameLoop.DayStarted += new EventHandler<DayStartedEventArgs>(onDayStarted);
             helper.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(onButtonPressed);
             helper.Events.Content.AssetRequested += new EventHandler<AssetRequestedEventArgs>(onAssetRequested);
-            helper.Events.Specialized.LoadStageChanged += new EventHandler<LoadStageChangedEventArgs>(onLoadStateChanged);
+            //helper.Events.Specialized.LoadStageChanged += new EventHandler<LoadStageChangedEventArgs>(onLoadStateChanged);
 
             //Adding console commands to the game
             //Fixes the health of the player if it was messed up by the mod
@@ -146,6 +148,26 @@ namespace SkillRings
 
         private void onDayStarted(object sender, DayStartedEventArgs e)
         {
+            if(!ringsChecked)
+            {
+                moddedSkillIds = Skills.GetSkillList();
+                if (moddedSkillIds.Length != 0) hasModdedSkills = true;
+
+                if (hasModdedSkills)
+                {
+                    List<int> oldExp = new List<int>();
+                    foreach (var id in moddedSkillIds)
+                    {
+                        oldExp.Add(Skills.GetExperienceFor(Game1.player, id));
+                    }
+                    moddedSkillExperience = oldExp.ToArray();
+                }
+
+                Helper.GameContent.InvalidateCache("Data/Objects");
+                Helper.GameContent.InvalidateCache("Data/Shops");
+                ringsChecked = true;
+            }
+
             oldExperience = Game1.player.experiencePoints.ToArray();
             handleMail();
         }
@@ -163,28 +185,14 @@ namespace SkillRings
             contentPatcherAPI.RegisterToken(ModManifest, "TierThreeRingPrice", () => new[] { cfg.tier3SkillRingPrice.ToString() });
         }
 
-        private void onLoadStateChanged(object sender, LoadStageChangedEventArgs e)
-        {
-            if(e.NewStage == StardewModdingAPI.Enums.LoadStage.CreatedBasicInfo || e.NewStage == StardewModdingAPI.Enums.LoadStage.SaveParsed)
-            {
-                moddedSkillIds = Skills.GetSkillList();
-                if(moddedSkillIds.Length != 0) hasModdedSkills = true;
+        //private void onLoadStateChanged(object sender, LoadStageChangedEventArgs e)
+        //{
+        //    if(e.NewStage == StardewModdingAPI.Enums.LoadStage.CreatedBasicInfo || e.NewStage == StardewModdingAPI.Enums.LoadStage.SaveParsed)
+        //    {
+                
+        //    }
 
-                if(hasModdedSkills)
-                {
-                    List<int> oldExp = new List<int>();
-                    foreach(var id in moddedSkillIds)
-                    {
-                        oldExp.Add(Skills.GetExperienceFor(Game1.player, id));
-                    }
-                    moddedSkillExperience = oldExp.ToArray();
-                }
-
-                Helper.GameContent.InvalidateCache("Data/Objects");
-                Helper.GameContent.InvalidateCache("Data/Shops");
-            }
-
-        }
+        //}
 
         private void onAssetRequested(object sender, AssetRequestedEventArgs e)
         {
@@ -907,6 +915,15 @@ namespace SkillRings
                         moddedSkillExperience[i] = Skills.GetExperienceFor(Game1.player, id);
                     }
                 }
+            }
+            if(hasModdedSkills)
+            {
+                List<int> oldExp = new List<int>();
+                foreach (var id in moddedSkillIds)
+                {
+                    oldExp.Add(Skills.GetExperienceFor(Game1.player, id));
+                }
+                moddedSkillExperience = oldExp.ToArray();
             }
             oldExperience = Game1.player.experiencePoints.ToArray();
         }

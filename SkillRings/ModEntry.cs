@@ -198,11 +198,10 @@ namespace SkillRings
         {
             if(e.NameWithoutLocale.IsEquivalentTo("Data/Objects"))
             {
-                if(hasModdedSkills)
+                if(hasModdedSkills && !ringsChecked)
                 {
                     foreach(string id in moddedSkillIds)
                     {
-                        
                         Monitor.Log(string.Format("Loaded Custom Skill {0}", id), (LogLevel) 1);
                         ObjectData Ring1 = new ObjectData()
                         {
@@ -213,7 +212,8 @@ namespace SkillRings
                             Category = StardewValley.Object.ringCategory,
                             Texture = "AlphaMeece.SkillRings/Objects",
                             SpriteIndex = 24,
-                            CustomFields = new Dictionary<string, string>()
+                            CustomFields = new Dictionary<string, string>(),
+                            ContextTags = new List<string> { "ring_item" }
                         };
                         ObjectData Ring2 = new ObjectData()
                         {
@@ -224,7 +224,8 @@ namespace SkillRings
                             Category = StardewValley.Object.ringCategory,
                             Texture = "AlphaMeece.SkillRings/Objects",
                             SpriteIndex = 25,
-                            CustomFields = new Dictionary<string, string>()
+                            CustomFields = new Dictionary<string, string>(),
+                            ContextTags = new List<string> { "ring_item" }
                         };
                         ObjectData Ring3 = new ObjectData()
                         {
@@ -235,7 +236,8 @@ namespace SkillRings
                             Category = StardewValley.Object.ringCategory,
                             Texture = "AlphaMeece.SkillRings/Objects",
                             SpriteIndex = 26,
-                            CustomFields = new Dictionary<string, string>()
+                            CustomFields = new Dictionary<string, string>(),
+                            ContextTags = new List<string> { "ring_item" }
                         };
 
                         ringIDs.Add(string.Format("AlphaMeece.SkillRings_{0}Ring1", id));

@@ -37,6 +37,7 @@ namespace SkillRings
         private int[] moddedSkillExperience = { };
 
         private bool ringsChecked = false;
+        private bool ringsGenerated = false;
 
         public override void Entry(IModHelper helper)
         {
@@ -163,9 +164,12 @@ namespace SkillRings
                     moddedSkillExperience = oldExp.ToArray();
                 }
 
-                Helper.GameContent.InvalidateCache("Data/Objects");
-                Helper.GameContent.InvalidateCache("Data/Shops");
                 ringsChecked = true;
+
+                Helper.GameContent.InvalidateCache("Data/Objects"); 
+                Helper.GameContent.InvalidateCache("Data/Shops");
+
+                ringsGenerated = true;
             }
 
             oldExperience = Game1.player.experiencePoints.ToArray();
@@ -176,8 +180,6 @@ namespace SkillRings
         {
             hasSpaceLuckSkill = Helper.ModRegistry.IsLoaded("spacechase0.LuckSkill");
             hasSVE = Helper.ModRegistry.IsLoaded("FlashShifter.SVECode");
-            //this.hasWMR = this.Helper.ModRegistry.IsLoaded("bcmpinc.WearMoreRings");
-            //this.hasCMR = this.Helper.ModRegistry.IsLoaded("Stari.CombineManyRings") || this.Helper.ModRegistry.IsLoaded("Arruda.BalancedCombineManyRings");
 
             var contentPatcherAPI = Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
             contentPatcherAPI.RegisterToken(ModManifest, "TierOneRingPrice", () => new[] { cfg.tier1SkillRingPrice.ToString() });
@@ -185,24 +187,15 @@ namespace SkillRings
             contentPatcherAPI.RegisterToken(ModManifest, "TierThreeRingPrice", () => new[] { cfg.tier3SkillRingPrice.ToString() });
         }
 
-        //private void onLoadStateChanged(object sender, LoadStageChangedEventArgs e)
-        //{
-        //    if(e.NewStage == StardewModdingAPI.Enums.LoadStage.CreatedBasicInfo || e.NewStage == StardewModdingAPI.Enums.LoadStage.SaveParsed)
-        //    {
-                
-        //    }
-
-        //}
-
         private void onAssetRequested(object sender, AssetRequestedEventArgs e)
         {
             if(e.NameWithoutLocale.IsEquivalentTo("Data/Objects"))
             {
-                if(hasModdedSkills && !ringsChecked)
+                if(hasModdedSkills && ringsChecked)
                 {
                     foreach(string id in moddedSkillIds)
                     {
-                        Monitor.Log(string.Format("Loaded Custom Skill {0}", id), (LogLevel) 1);
+                        //Monitor.Log(string.Format("Loaded Custom Skill {0}, {1}", id, Skills.GetSkill(id).GetName()), (LogLevel) 1);
                         ObjectData Ring1 = new ObjectData()
                         {
                             Name = string.Format("AlphaMeece.SkillRings_{0}Ring1", id),
@@ -687,6 +680,14 @@ namespace SkillRings
 
         private void onUpdateTicked(object sender, UpdateTickedEventArgs e)
         {
+            if (hasModdedSkills && !ringsGenerated)
+            {
+                Monitor.Log("Retrying to add rings", (LogLevel)1);
+                Helper.GameContent.InvalidateCache("Data/Objects");
+
+                ringsGenerated = true;
+            }
+
             if (!Context.IsPlayerFree || !e.IsOneSecond)
                 return;
 

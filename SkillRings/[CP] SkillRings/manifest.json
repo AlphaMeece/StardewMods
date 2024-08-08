@@ -2,7 +2,7 @@
 	"Name": "New Items for Skill Rings",
 	"Author": "AlphaMeece",
 	"Description": "Adds items for Skill Rings.",
-	"Version": "2.2.8",
+	"Version": "2.2.9",
 	"UniqueID": "AlphaMeece.CP.SkillRings",
 	"UpdateKeys": [ "Nexus:7515" ],
 	"MinimumApiVersion": "4.0.0",

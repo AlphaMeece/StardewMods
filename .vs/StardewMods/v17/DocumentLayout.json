@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|solutionrelative:skillrings\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|c:\\users\\alphameece\\desktop\\stardewmods\\skillrings\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|solutionrelative:skillrings\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|c:\\users\\alphameece\\desktop\\stardewmods\\skillrings\\[cp] skillrings\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|solutionrelative:skillrings\\[cp] skillrings\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|c:\\users\\alphameece\\desktop\\stardewmods\\skillrings\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|solutionrelative:skillrings\\modconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|c:\\users\\alphameece\\desktop\\stardewmods\\skillrings\\[cp] skillrings\\data\\shops.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|solutionrelative:skillrings\\[cp] skillrings\\data\\shops.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|c:\\users\\alphameece\\desktop\\stardewmods\\skillrings\\skillrings.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{31E3E099-8233-457A-8ABA-7BEEEF35D22E}|SkillRings\\SkillRings.csproj|solutionrelative:skillrings\\skillrings.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
@@ -18,8 +34,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "manifest.json",
+              "DocumentMoniker": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\manifest.json",
+              "RelativeDocumentMoniker": "SkillRings\\manifest.json",
+              "ToolTip": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\manifest.json",
+              "RelativeToolTip": "SkillRings\\manifest.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-03T12:21:09.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "manifest.json",
+              "DocumentMoniker": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\[CP] SkillRings\\manifest.json",
+              "RelativeDocumentMoniker": "SkillRings\\[CP] SkillRings\\manifest.json",
+              "ToolTip": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\[CP] SkillRings\\manifest.json",
+              "RelativeToolTip": "SkillRings\\[CP] SkillRings\\manifest.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-03T12:21:00.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ModConfig.cs",
+              "DocumentMoniker": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\ModConfig.cs",
+              "RelativeDocumentMoniker": "SkillRings\\ModConfig.cs",
+              "ToolTip": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\ModConfig.cs",
+              "RelativeToolTip": "SkillRings\\ModConfig.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T03:52:26.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "shops.json",
+              "DocumentMoniker": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\[CP] SkillRings\\data\\shops.json",
+              "RelativeDocumentMoniker": "SkillRings\\[CP] SkillRings\\data\\shops.json",
+              "ToolTip": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\[CP] SkillRings\\data\\shops.json",
+              "RelativeToolTip": "SkillRings\\[CP] SkillRings\\data\\shops.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-06T12:32:30.464Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,14 +95,14 @@
               "RelativeDocumentMoniker": "SkillRings\\ModEntry.cs",
               "ToolTip": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\ModEntry.cs",
               "RelativeToolTip": "SkillRings\\ModEntry.cs",
-              "ViewState": "AQIAAIUDAAAAAAAAAAAkwJgDAAAzAAAA",
+              "ViewState": "AQIAAFUBAAAAAAAAAIAwwF4BAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T00:52:44.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "SkillRings.csproj",
               "DocumentMoniker": "C:\\Users\\AlphaMeece\\Desktop\\StardewMods\\SkillRings\\SkillRings.csproj",
               "RelativeDocumentMoniker": "SkillRings\\SkillRings.csproj",
@@ -43,8 +110,7 @@
               "RelativeToolTip": "SkillRings\\SkillRings.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-29T00:19:40.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T00:19:40.034Z"
             }
           ]
         }

@@ -342,7 +342,7 @@ namespace SkillRings
             //Transform rings
             if (Game1.player.ActiveItem.QualifiedItemId == "(O)AlphaMeece.SkillRings_FishingRingB")
             {
-                foreach (Building building in Game1.getFarm().buildings)
+                foreach (Building building in Game1.player.currentLocation.buildings)
                 {
                     if (building.buildingType.Value == "Fish Pond" && building.occupiesTile(e.Cursor.GrabTile))
                     {
@@ -353,7 +353,7 @@ namespace SkillRings
             }
             else if (Game1.player.ActiveItem.QualifiedItemId == "(O)AlphaMeece.SkillRings_FarmingRingB")
             {
-                foreach (FarmAnimal allFarmAnimal in Game1.getFarm().getAllFarmAnimals())
+                foreach (FarmAnimal allFarmAnimal in Game1.player.currentLocation.getAllFarmAnimals())
                 {
                     Vector2 grabTile = allFarmAnimal.GetGrabTile();
                     int[,] coords = new int[9, 2]

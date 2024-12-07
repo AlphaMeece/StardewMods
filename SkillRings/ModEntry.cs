@@ -189,109 +189,116 @@ namespace SkillRings
 
         private void onAssetRequested(object sender, AssetRequestedEventArgs e)
         {
-            if(e.NameWithoutLocale.IsEquivalentTo("Data/Objects"))
+            if(cfg.moddedSkillrings)
             {
-                if(hasModdedSkills && ringsChecked)
-                {
-                    foreach(string id in moddedSkillIds)
-                    {
-                        //Monitor.Log(string.Format("Loaded Custom Skill {0}, {1}", id, Skills.GetSkill(id).GetName()), (LogLevel) 1);
-                        ObjectData Ring1 = new ObjectData()
-                        {
-                            Name = string.Format("AlphaMeece.SkillRings_{0}Ring1", id),
-                            DisplayName = string.Format("{0} 1", Skills.GetSkill(id).GetName()),
-                            Description = string.Format("+{0} {1}", cfg.tier1SkillRingBoost.ToString(), Skills.GetSkill(id).GetName()),
-                            Type = "Ring",
-                            Category = StardewValley.Object.ringCategory,
-                            Texture = "AlphaMeece.SkillRings/Objects",
-                            SpriteIndex = 24,
-                            CustomFields = new Dictionary<string, string>(),
-                            ContextTags = new List<string> { "ring_item" }
-                        };
-                        ObjectData Ring2 = new ObjectData()
-                        {
-                            Name = string.Format("AlphaMeece.SkillRings_{0}Ring2", id),
-                            DisplayName = string.Format("{0} 2", Skills.GetSkill(id).GetName()),
-                            Description = string.Format("+{0} {1}", cfg.tier2SkillRingBoost.ToString(), Skills.GetSkill(id).GetName()),
-                            Type = "Ring",
-                            Category = StardewValley.Object.ringCategory,
-                            Texture = "AlphaMeece.SkillRings/Objects",
-                            SpriteIndex = 25,
-                            CustomFields = new Dictionary<string, string>(),
-                            ContextTags = new List<string> { "ring_item" }
-                        };
-                        ObjectData Ring3 = new ObjectData()
-                        {
-                            Name = string.Format("AlphaMeece.SkillRings_{0}Ring3", id),
-                            DisplayName = string.Format("{0} 3", Skills.GetSkill(id).GetName()),
-                            Description = string.Format("+{0} {1}", cfg.tier3SkillRingBoost.ToString(), Skills.GetSkill(id).GetName()),
-                            Type = "Ring",
-                            Category = StardewValley.Object.ringCategory,
-                            Texture = "AlphaMeece.SkillRings/Objects",
-                            SpriteIndex = 26,
-                            CustomFields = new Dictionary<string, string>(),
-                            ContextTags = new List<string> { "ring_item" }
-                        };
+				if (e.NameWithoutLocale.IsEquivalentTo("Data/Objects"))
+				{
+					if (hasModdedSkills && ringsChecked)
+					{
+                        int skillNumber = 0;
+						foreach (string id in moddedSkillIds)
+						{
+							//Monitor.Log(string.Format("Loaded Custom Skill {0}, {1}", id, Skills.GetSkill(id).GetName()), (LogLevel) 1);
+							ObjectData Ring1 = new ObjectData()
+							{
+								Name = string.Format("AlphaMeece.SkillRings_{0}Ring1", id),
+								DisplayName = string.Format("{0} 1", Skills.GetSkill(id).GetName()),
+								Description = string.Format("+{0} {1}", cfg.tier1SkillRingBoost.ToString(), Skills.GetSkill(id).GetName()),
+								Type = "Ring",
+								Category = StardewValley.Object.ringCategory,
+								Texture = "AlphaMeece.SkillRings/Objects",
+								SpriteIndex = 24 + 4 * skillNumber,
+								CustomFields = new Dictionary<string, string>(),
+								ContextTags = new List<string> { "ring_item" }
+							};
+							ObjectData Ring2 = new ObjectData()
+							{
+								Name = string.Format("AlphaMeece.SkillRings_{0}Ring2", id),
+								DisplayName = string.Format("{0} 2", Skills.GetSkill(id).GetName()),
+								Description = string.Format("+{0} {1}", cfg.tier2SkillRingBoost.ToString(), Skills.GetSkill(id).GetName()),
+								Type = "Ring",
+								Category = StardewValley.Object.ringCategory,
+								Texture = "AlphaMeece.SkillRings/Objects",
+								SpriteIndex = 25 + 4 * skillNumber,
+								CustomFields = new Dictionary<string, string>(),
+								ContextTags = new List<string> { "ring_item" }
+							};
+							ObjectData Ring3 = new ObjectData()
+							{
+								Name = string.Format("AlphaMeece.SkillRings_{0}Ring3", id),
+								DisplayName = string.Format("{0} 3", Skills.GetSkill(id).GetName()),
+								Description = string.Format("+{0} {1}", cfg.tier3SkillRingBoost.ToString(), Skills.GetSkill(id).GetName()),
+								Type = "Ring",
+								Category = StardewValley.Object.ringCategory,
+								Texture = "AlphaMeece.SkillRings/Objects",
+								SpriteIndex = 26 + 4 * skillNumber,
+								CustomFields = new Dictionary<string, string>(),
+								ContextTags = new List<string> { "ring_item" }
+							};
 
-                        ringIDs.Add(string.Format("AlphaMeece.SkillRings_{0}Ring1", id));
-                        ringIDs.Add(string.Format("AlphaMeece.SkillRings_{0}Ring2", id));
-                        ringIDs.Add(string.Format("AlphaMeece.SkillRings_{0}Ring3", id));
+							ringIDs.Add(string.Format("AlphaMeece.SkillRings_{0}Ring1", id));
+							ringIDs.Add(string.Format("AlphaMeece.SkillRings_{0}Ring2", id));
+							ringIDs.Add(string.Format("AlphaMeece.SkillRings_{0}Ring3", id));
 
-                        e.Edit(asset =>
-                        {
-                            var editor = asset.AsDictionary<string, ObjectData>();
-                            editor.Data.TryAdd(Ring1.Name, Ring1);
-                            editor.Data.TryAdd(Ring2.Name, Ring2);
-                            editor.Data.TryAdd(Ring3.Name, Ring3);
-                        });
-                    }
-                }
-            }
+							e.Edit(asset =>
+							{
+								var editor = asset.AsDictionary<string, ObjectData>();
+								editor.Data.TryAdd(Ring1.Name, Ring1);
+								editor.Data.TryAdd(Ring2.Name, Ring2);
+								editor.Data.TryAdd(Ring3.Name, Ring3);
+							});
 
-            if(e.NameWithoutLocale.IsEquivalentTo("Data/Shops"))
-            {
-                e.Edit(asset =>
-                {
-                    for(int i = 0; i < ringIDs.Count; i++)
-                    {
-                        var editor = asset.AsDictionary<string, ShopData>();
-                        string ringID = ringIDs[i];
+                            skillNumber++;
+						}
+					}
+				}
 
-                        string shop = "Traveler";
-                        
-                        if(Game1.objectData.TryGetValue(ringID, out ObjectData ringData))
-                        {
-                            if(ringData.CustomFields.TryGetValue("AlphaMeece.SkillRings_Shop", out var customShop))
-                            {
-                                if(editor.Data.ContainsKey(customShop))
-                                {
-                                    shop = customShop;
-                                } 
-                                else Monitor.Log($"Attempted to add {ringID} to shop {customShop}, but {customShop} does not exist, defaulting to \"Traveler\"", LogLevel.Warn);
-                            }
-                        }
+				if (e.NameWithoutLocale.IsEquivalentTo("Data/Shops"))
+				{
+					e.Edit(asset =>
+					{
+						for (int i = 0; i < ringIDs.Count; i++)
+						{
+							var editor = asset.AsDictionary<string, ShopData>();
+							string ringID = ringIDs[i];
 
-                        if(editor.Data.TryGetValue(shop, out var merchant))
-                        {
-                            bool flag = false;
-                            foreach(var item in merchant.Items) if(item.ItemId == ringIDs[i]) flag = true;
+							string shop = "Traveler";
 
-                            int price = cfg.tier1SkillRingPrice;
-                            if(ringID.EndsWith("2")) price = cfg.tier2SkillRingPrice;
-                            else if(ringID.EndsWith("3")) price = cfg.tier3SkillRingPrice;
+							if (Game1.objectData.TryGetValue(ringID, out ObjectData ringData))
+							{
+								if (ringData.CustomFields.TryGetValue("AlphaMeece.SkillRings_Shop", out var customShop))
+								{
+									if (editor.Data.ContainsKey(customShop))
+									{
+										shop = customShop;
+									}
+									else Monitor.Log($"Attempted to add {ringID} to shop {customShop}, but {customShop} does not exist, defaulting to \"Traveler\"", LogLevel.Warn);
+								}
+							}
 
-                            if(!flag) merchant.Items.Add(new ShopItemData { 
-                                ItemId = ringIDs[i], 
-                                Price = price, 
-                                AvoidRepeat = true,
-                                ApplyProfitMargins = false,
-                                IgnoreShopPriceModifiers = true
-                            });
-                        }
-                        else Monitor.Log("Failed", (LogLevel) 1);
-                    }
-                });
-            }
+							if (editor.Data.TryGetValue(shop, out var merchant))
+							{
+								bool flag = false;
+								foreach (var item in merchant.Items) if (item.ItemId == ringIDs[i]) flag = true;
+
+								int price = cfg.tier1SkillRingPrice;
+								if (ringID.EndsWith("2")) price = cfg.tier2SkillRingPrice;
+								else if (ringID.EndsWith("3")) price = cfg.tier3SkillRingPrice;
+
+								if (!flag) merchant.Items.Add(new ShopItemData
+								{
+									ItemId = ringIDs[i],
+									Price = price,
+									AvoidRepeat = true,
+									ApplyProfitMargins = false,
+									IgnoreShopPriceModifiers = true
+								});
+							}
+							else Monitor.Log("Failed", (LogLevel)1);
+						}
+					});
+				}
+			}
         }
 
         private bool checkLocations(int[,] coords, Vector2 tile)

@@ -1,0 +1,12 @@
+{
+  "NormalSaloon": "Welcome to the Stardrop Saloon! Can I get you anything?",
+  "NormalSaloon4": "Hi there, @. Make yourself at home.",
+  "NormalSaloon8": "Hi there @. I'm glad to see you! You're always welcome here.",
+  "NormalSaloonTue": "Hi! Please relax and enjoy yourself.",
+  "NormalSaloonThu": "Hey, you look like you could use a beverage.",
+  "NormalSaloonFri": "Business has been really good tonight. I'm pleased.",
+  "BuyARound": "I'd like to buy a round.",
+  "BuyARoundResponse": "Coming right up!",
+  "DontBuyARound": "Nothing.",
+  "DontBuyARoundResponse": "Just let me know!"
+}

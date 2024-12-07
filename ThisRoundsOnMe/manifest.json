@@ -1,0 +1,13 @@
+{
+  "Name": "ThisRoundsOnMe",
+  "Author": "AlphaMeece",
+  "Version": "1.0.2",
+  "Description": "Allows the player to buy a round of drinks for everyone in the saloon",
+  "UniqueID": "AlphaMeece.ThisRoundsOnMe",
+  "EntryDLL": "ThisRoundsOnMe.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [ "Nexus:27683" ],
+  "Dependencies": [
+    { "UniqueID":  "Pathoschild.ContentPatcher" }
+  ]
+}

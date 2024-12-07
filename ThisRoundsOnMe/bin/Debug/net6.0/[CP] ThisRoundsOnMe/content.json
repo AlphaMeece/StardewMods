@@ -1,0 +1,18 @@
+{
+  "Format": "2.3.0",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Gus",
+      "Entries": {
+        "Saloon": "$query PLAYER_HAS_CONVERSATION_TOPIC Current AlphaMeece.ThisRoundsOnMe-BoughtARound#{{i18n:NormalSaloon}}|$y '{{i18n:NormalSaloon}}_{{i18n:BuyARound}} ({{AlphaMeece.ThisRoundsOnMe/Price}})_{{i18n:BuyARoundResponse}}*$action AlphaMeece.ThisRoundsOnMe-BuyARound {{AlphaMeece.ThisRoundsOnMe/FriendshipGain}} _{{i18n:DontBuyARound}}_{{i18n:DontBuyARoundResponse}}'",
+        "Saloon4": "$query PLAYER_HAS_CONVERSATION_TOPIC Current AlphaMeece.ThisRoundsOnMe-BoughtARound#{{i18n:NormalSaloon4}}|$y '{{i18n:NormalSaloon4}}_{{i18n:BuyARound}} ({{AlphaMeece.ThisRoundsOnMe/Price}})_{{i18n:BuyARoundResponse}}*$action AlphaMeece.ThisRoundsOnMe-BuyARound {{AlphaMeece.ThisRoundsOnMe/FriendshipGain}} _{{i18n:DontBuyARound}}_{{i18n:DontBuyARoundResponse}}'",
+        "Saloon8": "$query PLAYER_HAS_CONVERSATION_TOPIC Current AlphaMeece.ThisRoundsOnMe-BoughtARound#{{i18n:NormalSaloon8}}|$y '{{i18n:NormalSaloon8}}_{{i18n:BuyARound}} ({{AlphaMeece.ThisRoundsOnMe/Price}})_{{i18n:BuyARoundResponse}}*$action AlphaMeece.ThisRoundsOnMe-BuyARound {{AlphaMeece.ThisRoundsOnMe/FriendshipGain}} _{{i18n:DontBuyARound}}_{{i18n:DontBuyARoundResponse}}'",
+        "Saloon_Tue": "$query PLAYER_HAS_CONVERSATION_TOPIC Current AlphaMeece.ThisRoundsOnMe-BoughtARound#{{i18n:NormalSaloonTue}}|$y '{{i18n:NormalSaloonTue}}_{{i18n:BuyARound}} ({{AlphaMeece.ThisRoundsOnMe/Price}})_{{i18n:BuyARoundResponse}}*$action AlphaMeece.ThisRoundsOnMe-BuyARound {{AlphaMeece.ThisRoundsOnMe/FriendshipGain}} _{{i18n:DontBuyARound}}_{{i18n:DontBuyARoundResponse}}'",
+        "Saloon_Thu": "$query PLAYER_HAS_CONVERSATION_TOPIC Current AlphaMeece.ThisRoundsOnMe-BoughtARound#{{i18n:NormalSaloonThu}}|$y '{{i18n:NormalSaloonThu}}_{{i18n:BuyARound}} ({{AlphaMeece.ThisRoundsOnMe/Price}})_{{i18n:BuyARoundResponse}}*$action AlphaMeece.ThisRoundsOnMe-BuyARound {{AlphaMeece.ThisRoundsOnMe/FriendshipGain}} _{{i18n:DontBuyARound}}_{{i18n:DontBuyARoundResponse}}'",
+        "Saloon_Fri": "$query PLAYER_HAS_CONVERSATION_TOPIC Current AlphaMeece.ThisRoundsOnMe-BoughtARound#{{i18n:NormalSaloonFri}}|$y '{{i18n:NormalSaloonFri}}_{{i18n:BuyARound}} ({{AlphaMeece.ThisRoundsOnMe/Price}})_{{i18n:BuyARoundResponse}}*$action AlphaMeece.ThisRoundsOnMe-BuyARound {{AlphaMeece.ThisRoundsOnMe/FriendshipGain}} _{{i18n:DontBuyARound}}_{{i18n:DontBuyARoundResponse}}'"
+      },
+      "Update": "OnTimeChange"
+    }
+  ]
+}

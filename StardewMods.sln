@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillRings", "SkillRings\SkillRings.csproj", "{31E3E099-8233-457A-8ABA-7BEEEF35D22E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GluttonyRing", "GluttonyRing\GluttonyRing.csproj", "{0431F5C5-5054-4A80-BD5C-A7EDD7B248D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GluttonyRing", "GluttonyRing\GluttonyRing.csproj", "{0431F5C5-5054-4A80-BD5C-A7EDD7B248D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThisRoundsOnMe", "ThisRoundsOnMe\ThisRoundsOnMe.csproj", "{D813DFA4-B14E-4A80-9389-22DBF737DB2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0431F5C5-5054-4A80-BD5C-A7EDD7B248D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0431F5C5-5054-4A80-BD5C-A7EDD7B248D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0431F5C5-5054-4A80-BD5C-A7EDD7B248D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D813DFA4-B14E-4A80-9389-22DBF737DB2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D813DFA4-B14E-4A80-9389-22DBF737DB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D813DFA4-B14E-4A80-9389-22DBF737DB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D813DFA4-B14E-4A80-9389-22DBF737DB2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

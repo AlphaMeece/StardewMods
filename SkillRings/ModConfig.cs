@@ -19,5 +19,7 @@
         public float tier2ExperienceRingBoost { get; set; } = 0.2f;
 
         public float tier3ExperienceRingBoost { get; set; } = 0.5f;
+
+        public bool moddedSkillrings { get; set; } = true;
     }
 }

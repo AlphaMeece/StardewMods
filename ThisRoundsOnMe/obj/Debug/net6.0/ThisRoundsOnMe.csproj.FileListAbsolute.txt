@@ -1,0 +1,14 @@
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\bin\Debug\net6.0\ThisRoundsOnMe.deps.json
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\bin\Debug\net6.0\ThisRoundsOnMe.dll
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\obj\Debug\net6.0\ThisRoundsOnMe.csproj.AssemblyReference.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\obj\Debug\net6.0\ThisRoundsOnMe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\obj\Debug\net6.0\ThisRoundsOnMe.AssemblyInfoInputs.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\obj\Debug\net6.0\ThisRoundsOnMe.AssemblyInfo.cs
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\obj\Debug\net6.0\ThisRoundsOnMe.csproj.CoreCompileInputs.cache
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\obj\Debug\net6.0\ThisRoundsOnMe.sourcelink.json
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\obj\Debug\net6.0\ThisRoundsOnMe.dll
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\bin\Debug\net6.0\[CP] ThisRoundsOnMe\content.json
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\bin\Debug\net6.0\[CP] ThisRoundsOnMe\manifest.json
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\bin\Debug\net6.0\ContentPatcher.dll
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\obj\Debug\net6.0\ThisRoun.F059075F.Up2Date
+C:\Users\AlphaMeece\Desktop\StardewMods\ThisRoundsOnMe\bin\Debug\net6.0\[CP] ThisRoundsOnMe\i18n\default.json

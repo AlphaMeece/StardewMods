@@ -249,6 +249,7 @@ namespace SkillRings
 							});
 
                             skillNumber++;
+                            if (skillNumber == 10) skillNumber = 0;
 						}
 					}
 				}
